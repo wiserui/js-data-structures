@@ -4,6 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 module.exports = {
   entry: './src/index.js',
+  mode: 'development',
   output: {
     filename: '[name].bundle.js',
     path: path.resolve(__dirname, '..', 'dist'),
@@ -25,6 +26,10 @@ module.exports = {
         use: ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader'],
       },
     ],
+  },
+  devServer: {
+    contentBase: '../dist',
+    publicPath: '/',
   },
   plugins: [
     new webpack.ProgressPlugin(),

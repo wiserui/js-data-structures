@@ -1,4 +1,5 @@
+import bucketSort from './bucketSort';
 import mergeSort from './mergeSort';
 import quickSort from './quickSort';
-export {mergeSort, quickSort}
+export {bucketSort, mergeSort, quickSort}
 ;

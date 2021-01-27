@@ -1,2 +1,2 @@
-import {quickSort} from './sort';
-export {quickSort};
+import {mergeSort, quickSort} from './sort';
+export {mergeSort, quickSort};

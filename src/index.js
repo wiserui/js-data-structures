@@ -1,2 +1,3 @@
 import {bucketSort, mergeSort, quickSort} from './sort';
-export {bucketSort, mergeSort, quickSort};
+import {kmp} from './string';
+export {bucketSort, kmp, mergeSort, quickSort};

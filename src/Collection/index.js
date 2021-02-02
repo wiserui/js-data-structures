@@ -1,2 +1,3 @@
 import MaxPQ from './MaxPQ';
-export {MaxPQ};
+import MinPQ from './MinPQ';
+export {MaxPQ, MinPQ};

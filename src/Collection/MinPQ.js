@@ -8,12 +8,12 @@ const MinPQ = (() => {
       [arr[i], arr[j]] = [arr[j], arr[i]];
     };
     const __less = (i, j) => arr[i] - arr[j] < 0;
-    const __size = () => arr.length;
+    const __len = () => arr.length;
     const __skin = (i) => {
       let oldest;
-      while (__left(i)<__size()) {
+      while (__left(i)<__len()) {
         oldest = __left(i);
-        if (__right(i)<__size() && __less(__right(i), oldest)) {
+        if (__right(i)<__len() && __less(__right(i), oldest)) {
           oldest = __right(i);
         }
         if (__less(i, oldest)) {
@@ -33,13 +33,13 @@ const MinPQ = (() => {
       }
     };
     const add = (val) => {
-      const last = __size();
+      const last = __len();
       arr.push(val);
       __swim(last);
     };
     const getMin = () => arr[1];
     const delMin = () => {
-      const last = __size() - 1;
+      const last = __len() - 1;
       const result = arr[1];
       __exch(1, last);
       arr.splice(last, 1);
@@ -52,6 +52,7 @@ const MinPQ = (() => {
     this.getMin = getMin;
     this.delMin = delMin;
     this.add = add;
+    this.size = () => __len() - 1;
   };
 })();
 export default MinPQ;

@@ -7,7 +7,7 @@ import {
 } from './sort';
 import {kmp} from './string';
 import {Trie} from './Tree';
-import {MaxPQ, MinPQ} from './Collection';
+import {MaxPQ, MinPQ, UnionFind} from './Collection';
 export {
   bucketSort,
   countSort,
@@ -18,4 +18,5 @@ export {
   MinPQ,
   quickSort,
   Trie,
+  UnionFind,
 };
